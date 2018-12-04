@@ -1,0 +1,298 @@
+@import url("../function.less");
+@import url("../publicConfig.less");
+
+
+@yellow: #eeca23;
+
+.headerGroup {
+	background-color: #e9e9e9;
+	padding-bottom: 10px;
+	.greyLine {
+		width: 100%;
+		height: 1px;
+		background-color: #fff;
+		border-bottom: 1px solid #c2c2c2;
+
+	}
+    .title {
+    	font-size: 18px;
+	    font-weight: 600;
+	    color: #474d58;
+	    padding-top: 30px;
+	    padding-bottom: 33px
+    }
+    .buttonGroup {
+    	.choosePart{
+			.c_ul{
+				font-size: 0;
+				margin-bottom: 20px;
+				li{
+					display: inline-block;
+					font-size: 14px;
+					margin-right: 20px;
+					padding: 5px 16px;
+					border: 1px solid #c6c6c6;
+					cursor: pointer;
+					.border-radius(4px);
+					color: #393a3a;
+					&.active{
+						background: #FBD92E;
+						border-color: #FBD92E;
+					}
+				}
+			}
+			.in_ul{
+				// width: 96%;
+				margin: 0 auto;
+				margin-bottom: 20px;
+				li{
+					display: inline-block;
+					font-size: 14px;
+					margin-right: 20px;
+					padding: 5px 16px;
+					border: 1px solid #c6c6c6;
+					.border-radius(4px);
+					color: #393a3a;
+					cursor: pointer;
+					margin-bottom: 10px;
+					&.active{
+						background: #FBD92E;
+						border-color: #FBD92E;
+					}
+				}
+			}
+		}
+    }
+}
+.casedetailsGroup {
+    background-color: #e9e9e9;
+    width: 100%;
+    padding: 30px 0;
+    .leftGroup {
+    	float: left;
+    	width: 838px;
+    	.studentInfoPart,
+    	.studentWordsPart,
+    	.teacherInfoPart {
+    		background: #fff;
+    	}
+    	.studentInfoPart {
+		    padding: 12px 12px;
+		    background-color: @themeColor;
+		    .studentInfo {
+		    	padding: 30px 0;
+			    border: #fff dashed 1px;
+			    box-sizing: border-box;
+			    &>div {
+			    	display: table;
+			    	width: 100%;
+			    	&>div {
+			    		display: table-cell;
+			    		vertical-align: middle;
+			    	}
+			    	&>div:first-of-type {
+			    		width: 230px;
+			    		// text-align: center;
+			    		vertical-align: middle;
+			    		img {
+			    			width: 160px;
+			    			height: 160px;
+			    			.border-radius(50%);
+			    			margin-left: 36px;
+			    			// border: 3px solid #eee;
+			    		}
+			    	}
+			    	&>div:last-of-type {
+		    		    // vertical-align: middle;
+
+			    	}
+			    	.studentInfoList {
+		    		    max-width: 97%;
+		    		    color: #fff;
+		    		    // background-color: #eee;
+			    		li {
+			    			span {
+			    				display: inline-block;
+							    font-size: 16px;
+							    line-height: 36px;
+							    min-width: 137px;
+							    max-height: 100%;
+							    overflow: hidden;    
+								text-overflow:ellipsis; 
+								white-space: nowrap;
+			    			}
+			    			&.mult {
+			    				span {
+			    					width: 48%;
+			    				}
+			    			}
+			    		}
+			    	}
+			    }
+		    }
+
+    	}
+    	.studentWordsPart {
+    		padding: 35px;
+    		font-size: 14px;
+    		line-height: 25px;
+    		margin-top: 20px;
+    		border-bottom: none;
+    	}
+    	// .line {
+    	// 	background: url("../../../static/images/case/case_line.jpg") left bottom no-repeat;
+		   //  height: 11px;
+		   //  padding-top: 30px;
+		   //  background-color: #fff;
+    	// }
+    	.teacherInfoPart {
+			border-top: none;
+			padding: 10px 35px 47px;
+			margin-top: 10px;
+			&>h4 {
+				font-size: 18px;
+				font-weight: 700;
+				color: #333333;
+				line-height: 78px;
+			}
+			.teacherInfo {
+				display: table;
+				width: 100%;
+				&>div {
+					display: table-cell;
+					vertical-align: middle;
+				}
+				&>div:first-of-type {
+
+					width: 110px;
+					height: 135px;
+					img {
+						display: block;
+						width: 100%;
+						height: 100%;
+					}
+				}
+				&>div:last-of-type {
+				    width: calc(100% - 110px);
+				    height: 100%;
+				    box-sizing: border-box;
+				    padding-left: 40px;
+				    h5 {
+					    font-size: 16px;
+					    color: #333333;
+					    line-height: 18px;
+				    }
+				    // p {
+			    	//     width: 100%;
+					   //  max-height: 40px;
+					   //  line-height: 30px;
+					   //  font-size: 16px;
+					   //  overflow: hidden;
+					   //  a {
+					   //  	display: block;
+						  //   width: 150px;
+						  //   height: 40px;
+						  //   line-height: 40px;
+						  //   // background-color: @themeColor;
+						  //   font-size: 16px;
+						  //   font-weight: bold;
+						  //   color: @themeColor;
+						  //   text-align: center;
+						  //   border: 1px solid @themeColor;
+						  //   .border-radius(4px);
+					   //  }
+				    // }
+				    .teacherDes {
+					    padding-top: 6px;
+				    	width: 100%;
+					    max-height: 60px;
+					    line-height: 30px;
+					    font-size: 16px;
+					    overflow: hidden;
+					    color: #666;
+					    .multi-overflow(2)
+				    }
+				    .contactBtn {
+				    	display: block;
+					    width: 124px;
+					    line-height: 34px;
+					    font-size: 16px;
+					    color: @themeColor;
+					    text-align: center;
+					    border: 1px solid @themeColor;
+					    .border-radius(4px);
+					    margin-top: 15px;
+				    }
+				}
+			}
+    	}
+
+    }
+    .rightGroup {
+    	float: right;
+    	// width: 35.083%;
+    	width: 340px;
+		.similarCasePart {
+		    background-color: #fff;
+		    -moz-border-radius: 5px;
+		    -webkit-border-radius: 5px;
+		    border-radius: 5px;
+		    padding: 5.7% 6.65%;
+		    // padding: 24px 28px;
+		    margin-bottom: 30px;
+		    .title {
+		    	font-size: 18px;
+			    font-weight: 600;
+			    color: #474d58;
+			    padding-top: 30px;
+			    padding-bottom: 33px;
+		    	border-bottom: 1px solid #ebebeb;
+		    }
+		    .similarCaseList {
+		    	li {
+		    		font-size: 0;
+				    border-top: 1px solid #ebebeb;
+				    padding: 20px 0;
+				    a {
+				    	display: table;
+				    	width: 100%;
+				    }
+				    .imgContainerDv,
+				    .font {
+				    	display: table-cell;
+				    	vertical-align: middle;
+				    }
+				    .imgContainerDv {
+					    width: 100px;
+					    font-size: 0;
+					    .careimg {
+					    	display: block;
+					    	width: 100px;
+					    	height: 100px;
+						    .border-radius(50%);
+						}
+					}
+					.font {
+					    font-size: 18px;
+					    width: 246px;
+					    color: #000;
+					    padding-left: 20px;
+					    h4 {
+					    	font-size: 16px;
+					    	color: #333;
+    						.single-overflow();
+					    }
+					    .content {
+						    color: #666;
+						    font-size: 14px;
+						    line-height: 24px;
+					    	padding-top: 12px;
+						    .multi-overflow(2);
+						}
+					}
+					
+		    	}
+		    }
+		}
+    }
+}
