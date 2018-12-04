@@ -1,0 +1,253 @@
+@import url("../function.less");
+@import url("../publicConfig.less");
+
+.bannerPart {
+    height: 428px;
+    background: url('../../../static/images/school/schoolBanner.jpg') no-repeat center center;
+}
+.selectcity{
+	height: 50px;
+	margin-top: -50px;
+	font-size: 0;
+	.city_item{
+		min-width: 120px;
+		height: 50px;
+		line-height:50px;
+		display: inline-block;
+		font-size: 14px;
+		color: #3d3c3c;
+		vertical-align: top;
+		text-align: center;
+		background-color: #fff;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		margin-right: 15px;
+		.transition();
+		box-shadow: 0px -4px 8px -4px #626262;
+		a {
+			display: block;
+		}
+		&:hover{
+			background-color: #333333;
+			cursor: pointer;
+            a {
+                color: #fff;
+            }
+		}
+		&.active{
+			background-color: #333333;
+            a {
+                color: #fff;
+            }
+		}
+	}
+}
+
+.lineDv {
+    margin: 20px 0;
+    .s_title {
+        font-size: 16px;
+        color: #252525;
+        width: 105px;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .inputDv {
+        position: relative;
+        width: 500px;
+        float: left;
+        height: 37px;
+        line-height: 37px;
+        border: 1px solid @themeColor;
+        border-radius: 5px;
+        input {
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            padding: 0 10px;
+            padding-right: 60px;
+            width: 100%;
+            outline: none;
+            border: medium none;
+        }
+        .search {
+            // background-image: url("../../images/school/search_icon.png");
+            width: 70px;
+            height: 35px;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            background-color: @themeColor;
+            right: 0;
+            cursor: pointer;
+            text-align: center;
+            img {
+                vertical-align: middle;
+                margin-top: -2px;
+            }
+        }
+    }
+    .listul {
+        font-size: 0;
+        float: left;
+        .item {
+            font-size: 14px;
+            color: #3d3c3c;
+            background-color: #fffced;
+            display: inline-block;
+            padding: 10px 16px;
+            margin-right: 10px;
+            .transition();
+            &:hover {
+                background-color: #ffe14b;
+                cursor: pointer;
+                color: #fff;
+            }
+            &.active {
+                background-color: #ffe14b;
+                color: #fff;
+            }
+        }
+    }
+    
+    &.choose {
+        .listul {
+            .item {
+                background: none;
+                .transition();
+                border-radius: 5px;
+                &:hover {
+                    background-color: @themeColor;
+                    cursor: pointer;
+                }
+                &.active {
+                    background-color: @themeColor;
+                }
+            }
+        }
+    }
+}
+
+.resultPart {
+    .search_title {
+        font-size: 16px;
+        color: #3d3c3c;
+        font {
+            color: #e90101;
+            padding: 0 5px;
+        }
+    }
+    .schoolList {
+        margin: 40px auto;
+        margin-top: 20px;
+        .item_school {
+            border-bottom:1px solid #ebebeb;
+            padding: 30px 30px;
+            .transition();
+            &:hover {
+                box-shadow: 0 0px 30px 3px #ebebeb;
+            }
+            .imgDv{
+                width: 220px;
+                height: 140px;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 145px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+            .info{
+                width: 680px;
+                margin-left: 50px;
+                .name{
+                    color: #bdbdbd;
+                    font-size: 0;
+                    line-height: 30px;
+                    margin-bottom: 15px;
+                    .single-overflow();
+                    span {
+                        vertical-align: middle;
+                        font-size: 18px;
+                    }
+                    span:first-child {
+                        display: inline-block;
+                        color: #0d886b;
+                        font-size: 30px;
+                        margin-right: 20px;
+                    }
+                }
+                .weburl {
+                    font-size: 14px;
+                    line-height: 36px;
+                }
+                .description {
+                    color: #bbbcbc;
+                    line-height: 20px;
+                    font-size: 12px;
+                    height: 60px;
+                    padding-right: 10px;
+                    .multi-overflow(3);
+                }
+                .slistDv{
+                    font-size: 0;
+                    margin-top: 10px;
+                    .slineDv{
+                        font-size: 14px;
+                        color: #6b6b6b;
+                        width: 50%;
+                        display: inline-block;
+                        a{
+                        	color:#5a7cff;
+                        }
+                        &.full{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .btn-wapper{
+                padding-top: 10px;
+                a {
+                    display: block;
+                    width: 140px;
+                    height: 32px;
+                    border: none;
+                    border-radius: 4px;
+                    line-height: 32px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    transition: all .3s ease 0s;
+                    &.admissions{
+                        background: @themeColor;
+                        color: #fff;
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                    &.subscribe{
+                        color: #fff;
+                        background: #7188f6;
+                        margin-bottom: 10px;
+                        position: relative;
+                        text-indent: 35px;
+                    }
+                    &.apply{
+                        color: #353535;
+                        border: 1px solid #bdbdbd;
+                        box-sizing: border-box;
+                        background: #fff;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
