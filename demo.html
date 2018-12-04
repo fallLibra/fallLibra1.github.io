@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <style type="text/css">
+        .hemoxing {
+            display: -webkit-box; 
+            display: -moz-box; 
+            -webkit-box-orient: horizontal; 
+            -moz-box-orient: horizontal;
+        }
+        .flex1 { 
+             -webkit-box-flex: 1; 
+             -moz-box-flex: 1; 
+         } 
+         .flex2 { 
+             -webkit-box-flex: 2; 
+             -moz-box-flex: 2;
+
+         }
+         .relative {
+            position: relative;
+         }
+         .relative div {
+            margin-top: 20px;
+            background-color: #ff0;
+         }
+        .relative .div1 {
+            position: relative;
+            top: 100px;
+            background-color: #0ff;
+        }
+        .relative .div1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="hemoxing">
+        <div class="flex1">flex1</div>
+        <div class="flex2">flex2</div>
+    </div>
+    
+    <!-- <div class="relative">
+        <div class="div1">111</div>
+        <div class="div2">222</div>
+    </div> -->
+    <p style="border:1px solid red; width:200px; padding:20px;">
+    TEXT TEXT TEXT
+        <span style="background-color:#C0C0C0; position:relative;">
+            这段文字从左向右排列，红 XX 和 蓝 XX 和黄 XX 都是绝对定位元素，它的包含块是相对定位的SPAN。 可以通过它们绝对定位的位置来判断它们包含块的边缘。
+            <em style="position:absolute; color:red; top:0; left:0;">XX</em>
+            <em style="position:absolute; color:yellow; top:20px; left:0;">XX</em>
+            <em style="position:absolute; color:blue; bottom:0; right:0;">XX</em>
+        </span>
+    </p>
+    <script type="text/javascript">
+        var Counter = (function() {
+          var privateCounter = 0;
+          function changeBy(val) {
+            privateCounter += val;
+          }
+          return {
+            increment: function() {
+              changeBy(1);
+            },
+            decrement: function() {
+              changeBy(-1);
+            },
+            value: function() {
+              return privateCounter;
+            }
+          }   
+        })();
+
+        alert(Counter.value()); //提示 0
+        Counter.increment();
+        Counter.increment();
+        alert(Counter.value()); //提示 2
+        Counter.decrement();
+        alert(Counter.value()); //提示 1
+       /* function f1(){
+    　　　　var n=999;
+
+    　　　　function f2(){
+    　　　　　　alert(n++);
+    　　　　}
+    　　　　return f2
+    　　}
+    　　var result=f1();
+    　　result(); // 999
+    　　result(); // 1000*/
+    </script>
+</body>
+</html>
